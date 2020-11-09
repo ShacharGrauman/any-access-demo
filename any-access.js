@@ -1,4 +1,17 @@
 
+$('.btn.btn-primary.btn-block').attr('tabindex','0').on('click keydown',function(e){
+    if(e.key=='Enter', e.type=='click'){
+        console.log('click');
+        $(this).closest('.needs-validation').find('input:first').focus().attr('role','alert');
+    }
+});
+
+$('.btn.btn-primary').on('keydown', function(e) {
+    if(e.key === 'Enter') {
+        $('#firstName').focus();
+    }
+});
+
 //set radio group
 $('form > div.d-block.my-3').attr({ 'role': 'radiogroup', 'aria-label': function(){
     return $(this).prev().text();
@@ -25,6 +38,7 @@ $('.custom-radio:not(:first-child)').on('focus', function () {
     $(this).children('input').click();
 });
 
+$('.btn.btn-secondary').attr('tabindex', '0');
 
 $('.custom-radio').on("keydown", function (e) {
     if (e.which == 37 || e.which == 40) { // down&left
