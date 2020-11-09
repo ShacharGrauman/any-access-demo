@@ -7,8 +7,6 @@ $('form > div.d-block.my-3').attr({ 'role': 'radiogroup', 'aria-label': function
 //hide default input
 $('form > div.d-block.my-3 input').attr({'tabindex': '-1', 'role': 'presentation'});
 
-
-
 //set labels
 let ind = 1;
 $('.custom-radio').each(function () {
@@ -24,7 +22,7 @@ $('.custom-radio:first-child').attr({ 'aria-checked': 'true', 'tabindex': '0' })
 
 //check the first radio button
 $('.custom-radio:not(:first-child)').on('focus', function () {
-    $(this).click();
+    $(this).children('input').click();
 });
 
 
