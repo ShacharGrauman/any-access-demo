@@ -61,3 +61,7 @@ $('.custom-radio').on("keydown", function (e) {
         }
     }
 });
+
+$('.btn.btn-primary').on('click', function() {
+    $('#firstName').focus();
+});
