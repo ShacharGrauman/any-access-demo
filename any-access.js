@@ -25,7 +25,7 @@ let ind = 1;
 $('.custom-radio').each(function () {
     $(this).children('label').attr('id', 'radioLbl' + ind);
     $(this).attr({ 'role': 'radio', 'aria-labelledby': 'radioLbl' + ind });
-    i++;
+    ind++;
 });
 
 
@@ -34,7 +34,7 @@ $('.custom-radio:first-child').attr({ 'aria-checked': 'true', 'tabindex': '0' })
 // $('.custom-radio:not(:first-child)').attr({ 'aria-checked': 'false', 'tabindex': '-1' });
 
 //check the first radio button
-$('.custom-radio:not(:first-child)').on('focus', function () {
+$('.custom-radio:first-child').on('focus', function () {
     $(this).children('input').click();
 });
 
