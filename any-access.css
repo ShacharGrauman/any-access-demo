@@ -1,0 +1,4 @@
+*:focus {
+    border-color: white !important;
+    box-shadow: none !important;
+}
