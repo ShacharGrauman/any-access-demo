@@ -1,3 +1,4 @@
 *:focus {
-    outline: none;
+    border-color: white !important;
+    box-shadow: none !important;
 }
