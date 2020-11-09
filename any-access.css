@@ -2,3 +2,7 @@
     border-color: white !important;
     box-shadow: none !important;
 }
+
+*:focus {
+    outline: 2px solid red !important;
+}
